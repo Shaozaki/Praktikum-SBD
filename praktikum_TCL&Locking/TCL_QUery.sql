@@ -27,3 +27,5 @@ ROLLBACK TO b;
 ROLLBACK TO a;
 
 SELECT * FROM tbpasien;
+
+LOCK TABLE tbdokter READ;
