@@ -1,4 +1,4 @@
--- Active: 1734950767189@@127.0.0.1@3306@rumah_sakit
+-- Active: 1736077808406@@127.0.0.1@3306@rumah_sakit
 USE rumah_sakit;
 --Fatih Daffaul Dzaki
 --24SA11A062
@@ -28,4 +28,20 @@ ROLLBACK TO a;
 
 SELECT * FROM tbpasien;
 
+--Fatih Daffaul Dzaki
+--24SA11A062
 LOCK TABLE tbdokter READ;
+UNLOCK TABLE;
+
+SELECT * FROM tbdokter;
+
+--Fatih Daffaul Dzaki
+--24SA11A062
+LOCK TABLE tbobat WRITE;
+
+--Fatih Daffaul Dzaki
+--24SA11A062
+START TRANSACTION ;
+SELECT* FROM tbobat WHERE `idObat`= 'O-14' FOR UPDATE;
+unlock table;
+
